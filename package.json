@@ -1,0 +1,36 @@
+{
+  "name": "react-native-places-autocomplete",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShellyAmbar/react-native-autocomplete-google-maps.git"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "keywords": [
+    "autocomplete",
+    "auto",
+    "input",
+    "react",
+    "native",
+    "android",
+    "google",
+    "places",
+    "maps",
+    "map",
+    "google"
+  ],
+  "author": "shelly ambar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShellyAmbar/react-native-autocomplete-google-maps/issues"
+  },
+  "homepage": "https://github.com/ShellyAmbar/react-native-autocomplete-google-maps#readme",
+  "description": ""
+}
