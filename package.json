@@ -1,5 +1,5 @@
 {
-  "name": "react-native-places-autocomplete",
+  "name": "react-native-google-maps-autocomplete",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
