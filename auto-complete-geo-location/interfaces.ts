@@ -1,4 +1,4 @@
-import {TextInputProps, TextStyle, ViewStyle} from 'react-native';
+import {TextInputProps, TextStyle, ViewStyle} from "react-native";
 
 interface PlaceAutocompleteProps {
   quaryData: {key: string; types: string[]};
@@ -13,5 +13,6 @@ interface PlaceAutocompleteProps {
   resultListStyle?: ViewStyle;
   textInputProps?: TextInputProps;
   onTextChanged?: (text: string) => void;
+  country?: string;
 }
 export default PlaceAutocompleteProps;

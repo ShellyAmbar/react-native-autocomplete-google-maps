@@ -54,3 +54,4 @@ import AutoCompleteGeoLocation from 'react-native-google-maps-autocomplete';
 | resultListStyle?        | ViewStyle                                      |
 | textInputProps?         | TextInputProps                                 |
 | onTextChanged?          | (text: string) => void                         |
+| country?                | string                                         |
