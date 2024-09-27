@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     borderColor: "#000",
     borderWidth: 1,
     paddingHorizontal: 10,
+    paddingEnd: 50,
     borderRadius: 20,
     backgroundColor: "transparent",
   },
@@ -32,11 +33,16 @@ const styles = StyleSheet.create({
   },
   delete: {
     position: "absolute",
-    right: 0,
+    right: 10,
     bottom: 0,
     top: 0,
     justifyContent: "center",
     alignItems: "center",
+    zIndex: 1,
+  },
+  imgDelete: {
+    width: 24,
+    height: 24,
   },
 });
 

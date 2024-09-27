@@ -53,9 +53,8 @@ const AutoCompleteGeoLocation = ({
             style={[styles.delete]}
           >
             <Image
+              style={styles.imgDelete}
               source={require("../assets/images/close.png")}
-              width={14}
-              height={14}
             />
           </TouchableOpacity>
         )}
