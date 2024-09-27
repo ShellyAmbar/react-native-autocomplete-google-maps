@@ -1,5 +1,12 @@
 import React, {memo} from "react";
-import {View, TextInput, FlatList, Text, TouchableOpacity} from "react-native";
+import {
+  View,
+  TextInput,
+  FlatList,
+  Text,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 
 import styles from "./auto-complete-geo-location.styles";
 
@@ -21,27 +28,49 @@ const AutoCompleteGeoLocation = ({
   onTextChanged,
   country,
 }: PlaceAutocompleteProps) => {
-  const {handleSelect, suggestions, query, setQuery, setisHandleSearchEnabled} =
-    useAutoCompleteGeoLocation({
-      quaryData,
-      onPlaceSelected,
-      debounceDelayInSeconds,
-      onTextChanged,
-      country,
-    });
+  const {
+    handleSelect,
+    suggestions,
+    query,
+    setQuery,
+    setisHandleSearchEnabled,
+    handleDelete,
+  } = useAutoCompleteGeoLocation({
+    quaryData,
+    onPlaceSelected,
+    debounceDelayInSeconds,
+    onTextChanged,
+    country,
+  });
   return (
     <View style={[styles.container, {...containerStyle}]}>
-      <TextInput
-        placeholderTextColor={placeHolderColor}
-        style={[styles.input, {...inputStyle}]}
-        placeholder={placeholder}
-        value={query}
-        onChangeText={(text) => {
-          setisHandleSearchEnabled(true);
-          setQuery(text);
-        }}
-        {...textInputProps}
-      />
+      <View>
+        {query?.length > 0 && (
+          <TouchableOpacity
+            onPress={() => {
+              handleDelete();
+            }}
+            style={[styles.delete]}
+          >
+            <Image
+              source={require("../assets/images/close.png")}
+              width={14}
+              height={14}
+            />
+          </TouchableOpacity>
+        )}
+        <TextInput
+          placeholderTextColor={placeHolderColor}
+          style={[styles.input, {...inputStyle}]}
+          placeholder={placeholder}
+          value={query}
+          onChangeText={(text) => {
+            setisHandleSearchEnabled(true);
+            setQuery(text);
+          }}
+          {...textInputProps}
+        />
+      </View>
       {suggestions.length > 0 && (
         <FlatList
           data={suggestions}

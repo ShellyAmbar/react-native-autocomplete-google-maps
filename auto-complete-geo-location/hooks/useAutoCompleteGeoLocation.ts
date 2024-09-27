@@ -56,6 +56,15 @@ const useAutoCompleteGeoLocation = ({
     [setQuery, setSuggestions, onPlaceSelected]
   );
 
+  const handleDelete = useCallback(() => {
+    setisHandleSearchEnabled(true);
+    setQuery("");
+
+    setSuggestions([]);
+
+    Keyboard.dismiss();
+  }, [setQuery, setSuggestions]);
+
   const debounce = useDebounce({
     text: query,
     delay: debounceDelayInSeconds * 1000,
@@ -74,6 +83,7 @@ const useAutoCompleteGeoLocation = ({
     query,
     setQuery,
     setisHandleSearchEnabled,
+    handleDelete,
   };
 };
 
