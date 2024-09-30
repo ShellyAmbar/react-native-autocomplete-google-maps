@@ -4,6 +4,7 @@ interface UsePlaceAutocompleteProps {
   debounceDelayInSeconds?: number;
   onTextChanged?: (text: string) => void;
   country?: string;
+  isReset?: boolean;
 }
 
 export default UsePlaceAutocompleteProps;

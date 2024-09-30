@@ -9,6 +9,7 @@ const useAutoCompleteGeoLocation = ({
   debounceDelayInSeconds = 1,
   onTextChanged,
   country,
+  isReset,
 }: UsePlaceAutocompleteProps) => {
   const [query, setQuery] = useState("");
   const [isHandleSearchEnabled, setisHandleSearchEnabled] = useState(true);
@@ -64,6 +65,12 @@ const useAutoCompleteGeoLocation = ({
 
     Keyboard.dismiss();
   }, [setQuery, setSuggestions]);
+
+  useEffect(() => {
+    if (isReset) {
+      handleDelete();
+    }
+  }, [isReset]);
 
   const debounce = useDebounce({
     text: query,

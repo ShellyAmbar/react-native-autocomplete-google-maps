@@ -14,5 +14,6 @@ interface PlaceAutocompleteProps {
   textInputProps?: TextInputProps;
   onTextChanged?: (text: string) => void;
   country?: string;
+  isReset?: boolean;
 }
 export default PlaceAutocompleteProps;

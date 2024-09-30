@@ -27,6 +27,7 @@ const AutoCompleteGeoLocation = ({
   textInputProps = {},
   onTextChanged,
   country,
+  isReset,
 }: PlaceAutocompleteProps) => {
   const {
     handleSelect,
@@ -41,6 +42,7 @@ const AutoCompleteGeoLocation = ({
     debounceDelayInSeconds,
     onTextChanged,
     country,
+    isReset,
   });
   return (
     <View style={[styles.container, {...containerStyle}]}>
